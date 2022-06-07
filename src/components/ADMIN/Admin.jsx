@@ -47,12 +47,12 @@ const Admin = () => {
            localStorage.setItem('recipt', JSON.stringify(recipt))
            window.location.reload()
        }
-       
+       console.log(isLoggedin);
     
     }
     return (
         <>
-        {!isLoggedin ?
+        { !JSON.parse(localStorage.getItem('token-info')) ?
 
             <div className='adminlog container-fluid p-4'>
             <div className="adminlog-div bg-light">
